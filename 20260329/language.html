@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>多語系 Demo</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    button {
+      margin-right: 10px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    td {
+      border: 1px solid #333;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    /* 斑馬紋 */
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+
+    /* hover 效果 */
+    tr:hover {
+      background: #dfe6e9;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="title">課程表</h2>
+
+  <!-- 語言切換 -->
+  <button onclick="setLang('zh')">中文</button>
+  <button onclick="setLang('jp')">日本語</button>
+
+  <!-- 表格 -->
+  <table>
+    <tr>
+      <td data-key="chinese"></td>
+      <td data-key="math"></td>
+      <td data-key="english"></td>
+    </tr>
+    <tr>
+      <td data-key="chinese"></td>
+      <td data-key="math"></td>
+      <td data-key="english"></td>
+    </tr>
+    <tr>
+      <td data-key="chinese"></td>
+      <td data-key="math"></td>
+      <td data-key="english"></td>
+    </tr>
+  </table>
+
+  <script>
+    // 🌐 語言資料
+    const langData = {
+      zh: {
+        title: "課程表",
+        chinese: "國文",
+        math: "數學",
+        english: "英文"
+      },
+      jp: {
+        title: "スケジュール",
+        chinese: "中国語",
+        math: "数学",
+        english: "英語"
+      }
+    };
+
+    // 🔁 切換語言
+    function setLang(lang) {
+      document.getElementById("title").innerText = langData[lang].title;
+
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        el.innerText = langData[lang][key];
+      });
+    }
+
+    // 預設語言
+    setLang("zh");
+  </script>
+
+</body>
+</html>

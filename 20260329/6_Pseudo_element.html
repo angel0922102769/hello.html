@@ -1,0 +1,83 @@
+<<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>BEM 方法論示範</title>
+  <style>
+    /* BEM 元件樣式已在上面定義 */
+  </style>
+</head>
+<body>
+  <!-- 導航選單元件 -->
+  <nav class="nav nav--horizontal">
+    <a href="#" class="nav__item nav__item--active">
+      <span class="nav__link">首頁</span>
+    </a>
+    <a href="#" class="nav__item">
+      <span class="nav__link">關於我們</span>
+    </a>
+    <a href="#" class="nav__item">
+      <span class="nav__link">服務項目</span>
+    </a>
+    <a href="#" class="nav__item nav__item--disabled">
+      <span class="nav__link">聯絡我們</span>
+    </a>
+  </nav>
+
+  <!-- 卡片元件 -->
+  <div class="card card--featured">
+    <div class="card__header">
+      <h3 class="card__title">特色文章</h3>
+    </div>
+    <div class="card__body">
+      <p class="card__text">這是一篇特色文章的內容摘要。</p>
+      <button class="btn btn--primary">
+        <span class="btn__icon">📖</span>
+        <span class="btn__text">閱讀更多</span>
+      </button>
+    </div>
+    <div class="card__footer">
+      發布時間：2024-01-01
+    </div>
+  </div>
+
+  <!-- 警告卡片 -->
+  <div class="card card--warning card--small">
+    <div class="card__header">
+      <h4 class="card__title">重要提醒</h4>
+    </div>
+    <div class="card__body">
+      <p class="card__text">請注意系統維護時間。</p>
+    </div>
+  </div>
+
+  <!-- 按鈕群組 -->
+  <div class="btn-group">
+    <button class="btn btn--primary btn--large">
+      <span class="btn__icon">💾</span>
+      <span class="btn__text">儲存</span>
+    </button>
+    <button class="btn btn--success">
+      <span class="btn__icon">✓</span>
+      <span class="btn__text">確認</span>
+    </button>
+    <button class="btn btn--danger btn--small">
+      <span class="btn__icon">🗑️</span>
+      <span class="btn__text">刪除</span>
+    </button>
+    <button class="btn btn--disabled">
+      <span class="btn__text">停用按鈕</span>
+    </button>
+  </div>
+</body>
+</html>!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
